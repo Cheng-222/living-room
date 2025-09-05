@@ -13,7 +13,12 @@ const UserCenterManager = {
     bindEvents() {
         // 标签切换
         Utils.Event.delegate(document, '.nav-link', 'click', (e) => {
-            this.switchTab(e.target.dataset.tab);
+            e.preventDefault();
+            const navLink = e.target.closest('.nav-link');
+            console.log('点击导航链接:', navLink, navLink ? navLink.dataset.tab : 'null');
+            if (navLink && navLink.dataset.tab) {
+                this.switchTab(navLink.dataset.tab);
+            }
         });
         
         // 课程筛选
@@ -46,6 +51,7 @@ const UserCenterManager = {
 
     // 标签页切换功能
     switchTab(targetTab) {
+        console.log('切换到标签页:', targetTab);
         if (!targetTab) return;
         
         // 移除所有活跃状态

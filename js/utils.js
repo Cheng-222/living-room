@@ -96,13 +96,35 @@ const DOMUtils = {
     },
 
     /**
-     * 检查是否包含类名
+     * 检查元素是否包含指定类名
      * @param {Element} element - 目标元素
      * @param {string} className - 类名
      * @returns {boolean}
      */
     hasClass(element, className) {
         return element ? element.classList.contains(className) : false;
+    },
+
+    /**
+     * 清空元素内容
+     * @param {Element} element - 目标元素
+     */
+    empty(element) {
+        if (element) {
+            element.innerHTML = '';
+        }
+    },
+
+    /**
+     * 从所有匹配的元素中移除指定类名
+     * @param {string} selector - 选择器
+     * @param {string} className - 要移除的类名
+     */
+    removeClassFromAll(selector, className) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            element.classList.remove(className);
+        });
     }
 };
 

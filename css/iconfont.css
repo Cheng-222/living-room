@@ -1,0 +1,41 @@
+/* 图标字体样式文件 */
+
+/* 基础图标字体定义 */
+@font-face {
+  font-family: 'iconfont';
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 常用图标类 */
+.icon-home:before { content: "🏠"; }
+.icon-user:before { content: "👤"; }
+.icon-course:before { content: "📚"; }
+.icon-video:before { content: "🎥"; }
+.icon-setting:before { content: "⚙️"; }
+.icon-search:before { content: "🔍"; }
+.icon-play:before { content: "▶️"; }
+.icon-pause:before { content: "⏸️"; }
+.icon-stop:before { content: "⏹️"; }
+.icon-next:before { content: "⏭️"; }
+.icon-prev:before { content: "⏮️"; }
+.icon-heart:before { content: "❤️"; }
+.icon-star:before { content: "⭐"; }
+.icon-download:before { content: "⬇️"; }
+.icon-upload:before { content: "⬆️"; }
+.icon-close:before { content: "❌"; }
+.icon-check:before { content: "✅"; }
+.icon-warning:before { content: "⚠️"; }
+.icon-info:before { content: "ℹ️"; }
+.icon-success:before { content: "✅"; }
+.icon-error:before { content: "❌"; }

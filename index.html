@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播演示</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="icon" href="./images/菜.png" type="image/x-icon">
+    <script src="./js/utils.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/recommendations.js"></script>
+    <script src="./js/search.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img src="https://wechatapppro-1252524126.file.myqcloud.com/appAKLWLitn7978/image/b_u_5b2225aa46488_oGKN7IvA/kxkdcblx0wlc.png"
+                    alt="Logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item active">首页</a>
+                <a href="user-center.html" class="nav-item">我的学习</a>
+                <a href="course-detail.html" class="nav-item">我的课程</a>
+                <a href="#" class="nav-item">模考系统</a>
+            </nav>
+        </div>
+        <div class="right-section">
+            <div class="search">
+                <button class="search-button">
+                    <span class="search iconfont">&#xe60d</span>
+                    <span>搜索</span>
+                </button>
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="搜索">
+                </div>
+                <span class="search-cancel">取消</span>
+            </div>
+            <a href="user-center.html" class="nav-link">学习记录</a>
+            <a href="user-center.html" class="nav-link">我的订阅</a>
+            <a href="user-center.html" class="user-avatar">
+                <img src="./images/菜.png" alt="现网蓝说2号【7978勿扰】">
+            </a>
+
+        </div>
+    </header>
+
+    <div class="live-preview">
+        <img src="https://commonresource-1252524126.cdn.xiaoeknow.com/image/l6nfw9120t1u.png?imageView2/2/w/1050/q/100|imageMogr2/ignore-error/1"
+            alt="直播演示" class="live-image">
+        <div class="live-details">
+            <div class="live-top">
+                <div class="live-status">直播</div>
+                <div class="live-title">录播演示</div>
+            </div>
+            <div class="live-time">
+                <span class="live_time0">
+                    直播时间：2025.05.11 23:40:00
+                </span>
+            </div>
+            <div class="live-buttom">
+                <button class="enter-live-btn" onclick="window.location.href='live-room.html'">进入回放</button>
+                <span class="live-end">直播已结束</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="main-left">
+            <div class="interaction-section">
+                <div class="tabs">
+                    <div class="tab">
+                        <button class="active">详情</button>
+                    </div>
+                    <div class="tab">
+                        <button>课堂互动</button>
+                    </div>
+                </div>
+                <div class="comments-area">
+                    <img src="https://assets.cdn.xiaoeknow.com/decorate/pc-client/1.82.101/img/img_empty.svg" alt="">
+                    <div class="brief-introduction">暂无简介</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="main-right">
+            <div class="user-info">
+                <img src="./images/菜.png" alt="讲师头像" class="teacher-avatar">
+                <div class="user-details">
+                    <h3>现网蓝说2号【7978勿扰】</h3>
+                    <button class="follow-btn">进店逛逛</button>
+                </div>
+            </div>
+
+            <div class="recommendation-list" id="recommendationList">
+                <h2 class="section-title">相关推荐</h2>
+                <!-- 推荐列表将由JavaScript动态生成 -->
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul class="suspend-content">
+                <li class="qr-code">
+                    <span class="iconfont">&#xe642</span>
+                    <p>二维码</p>
+                    <div class="popover">
+                        <img src="./images/sidebar_1.jpg" alt="">
+                    </div>
+                </li>
+                <li class="location">
+                    <span class="iconfont">&#xe610</span>
+                    <p>位置</p>
+                    <div class="popover">
+                        <img src="./images/sidebar_1.jpg" alt="">
+                    </div>
+                </li>
+                <li class="notice">
+                    <span class="iconfont">&#xe649</span>
+                    <p>公告</p>
+                    <div class="popover">
+                        <img src="./images/sidebar_1.jpg" alt="">
+                    </div>
+                </li>
+                <li class="service">
+                    <span class="iconfont">&#xe608</span>
+                    <p>客服</p>
+                    <div class="popover">
+                        <img src="./images/sidebar_1.jpg" alt="">
+                    </div>
+                </li>
+                <li class="apple">
+                    <span class="iconfont">&#xe63d</span>
+                    <p>苹果12</p>
+                    <div class="popover">
+                        <img src="./images/sidebar_1.jpg" alt="">
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                Copyright © 134234粤网文备案号
+                <a href="">粤ICP备15002p2号</a>
+                <span> | </span>
+                <a href="">投诉</a>
+            </div>
+            <div class="footer-support">
+                <span class="iconfont logo">&#xe62d</span>
+                小鹅通提供技术支持
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

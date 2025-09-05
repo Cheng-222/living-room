@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 在线学习平台</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/user-center.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="iconfont icon-logo"></i>
+                    <span>学习平台</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">首页</a>
+                <a href="live-room.html" class="nav-item">直播间</a>
+                <a href="user-center.html" class="nav-item active">个人中心</a>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="搜索课程..." class="search-input">
+                <button class="search-btn">
+                    <i class="iconfont icon-search"></i>
+                </button>
+            </div>
+            <div class="user-info">
+                <img src="images/菜.png" alt="现网蓝说2号【7978勿扰】" class="user-avatar">
+                <span class="username">现网蓝说2号【7978勿扰】</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="wrapper">
+            <!-- 侧边栏导航 -->
+            <aside class="sidebar-nav">
+                <div class="user-profile">
+                    <img src="images/菜.png" alt="现网蓝说2号【7978勿扰】" class="profile-avatar">
+                    <h3 class="profile-name">现网蓝说2号【7978勿扰】</h3>
+                    <p class="profile-level">VIP会员</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">128</span>
+                            <span class="stat-label">已学课程</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">学习时长(h)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">89</span>
+                            <span class="stat-label">学习天数</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="nav-list">
+                    <a href="#" class="nav-link active" data-tab="overview">
+                        <i class="iconfont icon-dashboard"></i>
+                        <span>学习概览</span>
+                    </a>
+                    <a href="#" class="nav-link" data-tab="courses">
+                        <i class="iconfont icon-book"></i>
+                        <span>我的课程</span>
+                    </a>
+                    <a href="#" class="nav-link" data-tab="subscriptions">
+                        <i class="iconfont icon-heart"></i>
+                        <span>订阅管理</span>
+                    </a>
+                    <a href="#" class="nav-link" data-tab="progress">
+                        <i class="iconfont icon-chart"></i>
+                        <span>学习进度</span>
+                    </a>
+                    <a href="#" class="nav-link" data-tab="certificates">
+                        <i class="iconfont icon-award"></i>
+                        <span>我的证书</span>
+                    </a>
+                    <a href="#" class="nav-link" data-tab="settings">
+                        <i class="iconfont icon-settings"></i>
+                        <span>账户设置</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- 内容区域 -->
+            <section class="content-area">
+                <!-- 学习概览 -->
+                <div class="tab-panel active" id="overview">
+                    <h2 class="panel-title">学习概览</h2>
+                    <div class="overview-cards">
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="iconfont icon-play"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>今日学习</h3>
+                                <p class="card-number">2.5小时</p>
+                                <p class="card-desc">已完成3个课程</p>
+                            </div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="iconfont icon-target"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>本周目标</h3>
+                                <p class="card-number">75%</p>
+                                <p class="card-desc">15/20小时</p>
+                            </div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon">
+                                <i class="iconfont icon-trophy"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>学习成就</h3>
+                                <p class="card-number">12</p>
+                                <p class="card-desc">获得徽章数</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-activity">
+                        <h3>最近学习</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <img src="images/course1.jpg" alt="课程封面" class="activity-thumb">
+                                <div class="activity-info">
+                                    <h4>JavaScript高级编程</h4>
+                                    <p>学习进度: 85%</p>
+                                    <span class="activity-time">2小时前</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">继续学习</button>
+                            </div>
+                            <div class="activity-item">
+                                <img src="images/course2.jpg" alt="课程封面" class="activity-thumb">
+                                <div class="activity-info">
+                                    <h4>React实战开发</h4>
+                                    <p>学习进度: 45%</p>
+                                    <span class="activity-time">1天前</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">继续学习</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 我的课程 -->
+                <div class="tab-panel" id="courses">
+                    <h2 class="panel-title">我的课程</h2>
+                    <div class="course-filters">
+                        <button class="filter-btn active" data-filter="all">全部</button>
+                        <button class="filter-btn" data-filter="learning">学习中</button>
+                        <button class="filter-btn" data-filter="completed">已完成</button>
+                        <button class="filter-btn" data-filter="favorite">收藏</button>
+                    </div>
+                    <div class="course-grid">
+                        <div class="course-card" data-status="learning">
+                            <img src="images/course1.jpg" alt="课程封面" class="course-image">
+                            <div class="course-info">
+                                <h4>JavaScript高级编程</h4>
+                                <p class="course-instructor">讲师: 张老师</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                                <p class="progress-text">进度: 85%</p>
+                                <button class="btn btn-primary">继续学习</button>
+                            </div>
+                        </div>
+                        <div class="course-card" data-status="learning">
+                            <img src="images/course2.jpg" alt="课程封面" class="course-image">
+                            <div class="course-info">
+                                <h4>React实战开发</h4>
+                                <p class="course-instructor">讲师: 李老师</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <p class="progress-text">进度: 45%</p>
+                                <button class="btn btn-primary">继续学习</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 订阅管理 -->
+                <div class="tab-panel" id="subscriptions">
+                    <h2 class="panel-title">订阅管理</h2>
+                    <div class="subscription-list">
+                        <div class="subscription-item">
+                            <div class="subscription-info">
+                                <h4>前端开发专栏</h4>
+                                <p>订阅时间: 2024-01-15</p>
+                                <p>状态: 活跃</p>
+                            </div>
+                            <div class="subscription-actions">
+                                <button class="btn btn-secondary">管理</button>
+                                <button class="btn btn-ghost">取消订阅</button>
+                            </div>
+                        </div>
+                        <div class="subscription-item">
+                            <div class="subscription-info">
+                                <h4>后端技术周刊</h4>
+                                <p>订阅时间: 2024-02-01</p>
+                                <p>状态: 活跃</p>
+                            </div>
+                            <div class="subscription-actions">
+                                <button class="btn btn-secondary">管理</button>
+                                <button class="btn btn-ghost">取消订阅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学习进度 -->
+                <div class="tab-panel" id="progress">
+                    <h2 class="panel-title">学习进度</h2>
+                    <div class="progress-overview">
+                        <div class="progress-chart">
+                            <canvas id="progressChart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat-card">
+                                <h4>本月学习时长</h4>
+                                <p class="stat-value">45.5小时</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>完成课程数</h4>
+                                <p class="stat-value">8门</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>平均每日学习</h4>
+                                <p class="stat-value">1.5小时</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 我的证书 -->
+                <div class="tab-panel" id="certificates">
+                    <h2 class="panel-title">我的证书</h2>
+                    <div class="certificate-grid">
+                        <div class="certificate-card">
+                            <div class="certificate-icon">
+                                <i class="iconfont icon-certificate"></i>
+                            </div>
+                            <h4>JavaScript高级开发认证</h4>
+                            <p>获得时间: 2024-01-20</p>
+                            <button class="btn btn-primary">查看证书</button>
+                        </div>
+                        <div class="certificate-card">
+                            <div class="certificate-icon">
+                                <i class="iconfont icon-certificate"></i>
+                            </div>
+                            <h4>前端框架专家认证</h4>
+                            <p>获得时间: 2024-02-15</p>
+                            <button class="btn btn-primary">查看证书</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 账户设置 -->
+                <div class="tab-panel" id="settings">
+                    <h2 class="panel-title">账户设置</h2>
+                    <div class="settings-form">
+                        <div class="form-section">
+                            <h3>基本信息</h3>
+                            <div class="form-group">
+                                <label>用户名</label>
+                                <input type="text" value="用户名" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>邮箱</label>
+                                <input type="email" value="user@example.com" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>手机号</label>
+                                <input type="tel" value="138****8888" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <h3>学习偏好</h3>
+                            <div class="form-group">
+                                <label>每日学习目标</label>
+                                <select class="form-select">
+                                    <option>1小时</option>
+                                    <option selected>2小时</option>
+                                    <option>3小时</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>学习提醒</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span>邮件提醒</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>短信提醒</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">保存设置</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="wrapper">
+            <p>&copy; 2024 在线学习平台. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/user-center.js"></script>
+</body>
+</html>

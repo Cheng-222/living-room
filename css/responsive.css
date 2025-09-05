@@ -1,0 +1,764 @@
+/* 响应式设计 - 移动端适配 */
+
+/* 基础响应式断点 */
+:root {
+    --mobile-breakpoint: 768px;
+    --tablet-breakpoint: 1024px;
+    --desktop-breakpoint: 1200px;
+}
+
+/* 通用移动端优化 */
+@media (max-width: 768px) {
+    /* 基础布局调整 */
+    .wrapper {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* 字体大小调整 */
+    html {
+        font-size: 14px;
+    }
+    
+    /* 按钮适配 */
+    .btn {
+        min-height: 44px; /* 触摸友好的最小高度 */
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .btn-large {
+        min-height: 48px;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    /* 输入框适配 */
+    input, textarea, select {
+        min-height: 44px;
+        font-size: 16px; /* 防止iOS缩放 */
+    }
+    
+    /* 间距调整 */
+    .main-content {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* 卡片间距 */
+    .card {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* 头部导航响应式 */
+@media (max-width: 768px) {
+    .header {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .header .wrapper {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .logo h1 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .nav-menu {
+        display: none; /* 隐藏主导航，可以用汉堡菜单替代 */
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .search {
+        flex: 1;
+        max-width: none;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .user-menu {
+        position: relative;
+    }
+    
+    .dropdown {
+        right: 0;
+        left: auto;
+        min-width: 150px;
+    }
+}
+
+/* 首页响应式 */
+@media (max-width: 768px) {
+    /* 主要内容布局 */
+    .main-content .wrapper {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .main-left {
+        width: 100%;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: static;
+        order: -1; /* 移动端侧边栏置顶 */
+    }
+    
+    /* 直播预览网格 */
+    .live-preview {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .live-item {
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+    
+    .live-image {
+        width: 120px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+    
+    .live-details {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .live-title {
+        font-size: var(--font-size-sm);
+        line-height: var(--line-height-tight);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .live-time {
+        font-size: var(--font-size-xs);
+    }
+    
+    .enter-live-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+    
+    /* 推荐课程网格 */
+    .recommendation-list {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .course-item {
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+    
+    .course-item img {
+        width: 100px;
+        height: 70px;
+        flex-shrink: 0;
+    }
+    
+    .course-info {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .course-title {
+        font-size: var(--font-size-sm);
+        line-height: var(--line-height-tight);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .price-container {
+        margin-top: var(--spacing-xs);
+    }
+    
+    .current-price {
+        font-size: var(--font-size-base);
+    }
+    
+    .original-price {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* 标签页 */
+    .tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tab {
+        white-space: nowrap;
+        min-width: auto;
+    }
+}
+
+/* 直播间页面响应式 */
+@media (max-width: 768px) {
+    .live-room {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .video-section {
+        width: 100%;
+        height: auto;
+    }
+    
+    .video-container {
+        aspect-ratio: 16/9;
+        height: auto;
+    }
+    
+    .interaction-section {
+        width: 100%;
+        height: 400px; /* 固定高度，避免过高 */
+        order: 2;
+    }
+    
+    /* 弹幕控制 */
+    .danmaku-manager {
+        padding: var(--spacing-sm);
+    }
+    
+    .danmaku-controls {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    
+    .mode-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+    
+    .danmaku-input-area {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    #danmakuInput {
+        width: 100%;
+    }
+    
+    #sendDanmaku {
+        width: 100%;
+    }
+    
+    /* 顶部信息栏 */
+    .live-top {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .live-title {
+        font-size: var(--font-size-base);
+        order: 1;
+        width: 100%;
+    }
+    
+    .live-stats {
+        order: 2;
+        flex: 1;
+    }
+    
+    .live-controls {
+        order: 3;
+        gap: var(--spacing-xs);
+    }
+    
+    .language-select {
+        min-width: auto;
+    }
+    
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* 用户中心页面响应式 */
+@media (max-width: 768px) {
+    .user-center {
+        flex-direction: column;
+    }
+    
+    .user-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .user-content {
+        width: 100%;
+    }
+    
+    /* 用户资料卡片 */
+    .profile-card {
+        text-align: center;
+    }
+    
+    .profile-avatar {
+        margin: 0 auto var(--spacing-md) auto;
+    }
+    
+    .profile-stats {
+        justify-content: center;
+    }
+    
+    /* 导航列表 */
+    .nav-list {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: var(--spacing-sm);
+    }
+    
+    .nav-link {
+        white-space: nowrap;
+        min-width: auto;
+        text-align: center;
+    }
+    
+    /* 概览卡片 */
+    .overview-cards {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .overview-card {
+        text-align: center;
+    }
+    
+    /* 课程网格 */
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .course-card {
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+    
+    .course-card img {
+        width: 100px;
+        height: 70px;
+        flex-shrink: 0;
+    }
+    
+    .course-card .card-content {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    /* 过滤器 */
+    .course-filters {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+        min-width: auto;
+    }
+    
+    /* 订阅列表 */
+    .subscription-list {
+        gap: var(--spacing-sm);
+    }
+    
+    .subscription-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .subscription-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--spacing-sm);
+    }
+    
+    /* 证书网格 */
+    .certificate-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    /* 设置表单 */
+    .settings-form .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .settings-form label {
+        display: block;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .settings-form input,
+    .settings-form select,
+    .settings-form textarea {
+        width: 100%;
+    }
+}
+
+/* 课程详情页面响应式 */
+@media (max-width: 768px) {
+    /* 面包屑 */
+    .breadcrumb {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .breadcrumb .wrapper {
+        font-size: var(--font-size-sm);
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* 课程布局 */
+    .course-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .course-sidebar {
+        order: -1;
+        position: static;
+        top: auto;
+    }
+    
+    /* 课程头部 */
+    .course-header {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg);
+    }
+    
+    .course-info {
+        order: 2;
+    }
+    
+    .course-video {
+        order: 1;
+    }
+    
+    .course-title {
+        font-size: var(--font-size-xl);
+        line-height: var(--line-height-tight);
+    }
+    
+    .course-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .course-meta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    /* 标签页 */
+    .course-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+        min-width: auto;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    /* 标签页内容 */
+    .tab-panel {
+        padding: var(--spacing-md);
+    }
+    
+    /* 章节列表 */
+    .chapter-header {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .lesson-item {
+        padding: var(--spacing-sm) var(--spacing-md);
+        flex-wrap: wrap;
+    }
+    
+    .lesson-title {
+        order: 1;
+        width: 100%;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .lesson-duration {
+        order: 2;
+    }
+    
+    .lesson-status {
+        order: 3;
+        margin-left: auto;
+    }
+    
+    /* 评价区域 */
+    .reviews-summary {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .rating-breakdown {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* 讲师介绍 */
+    .instructor-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .instructor-stats {
+        justify-content: center;
+    }
+    
+    /* 购买卡片 */
+    .purchase-card {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .purchase-actions {
+        gap: var(--spacing-xs);
+    }
+    
+    .btn-large {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+    
+    /* 相关课程 */
+    .related-course-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .related-thumb {
+        width: 50px;
+        height: 35px;
+    }
+    
+    .related-info h4 {
+        font-size: var(--font-size-xs);
+    }
+    
+    .related-price {
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* 平板设备适配 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* 首页布局调整 */
+    .live-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .recommendation-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 直播间布局 */
+    .interaction-section {
+        width: 300px;
+    }
+    
+    /* 用户中心 */
+    .overview-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 课程详情 */
+    .course-layout {
+        grid-template-columns: 1fr 300px;
+    }
+}
+
+/* 超小屏幕设备 */
+@media (max-width: 480px) {
+    :root {
+        --spacing-xs: 4px;
+        --spacing-sm: 6px;
+        --spacing-md: 8px;
+        --spacing-lg: 12px;
+        --spacing-xl: 16px;
+    }
+    
+    .wrapper {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* 字体进一步缩小 */
+    html {
+        font-size: 13px;
+    }
+    
+    /* 按钮调整 */
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* 卡片内边距 */
+    .card {
+        padding: var(--spacing-sm);
+    }
+    
+    /* 直播项目 */
+    .live-item {
+        flex-direction: column;
+    }
+    
+    .live-image {
+        width: 100%;
+        height: 120px;
+    }
+    
+    /* 课程项目 */
+    .course-item {
+        flex-direction: column;
+    }
+    
+    .course-item img {
+        width: 100%;
+        height: 120px;
+    }
+    
+    /* 模态框 */
+    .modal-content {
+        width: 95%;
+        margin: var(--spacing-sm);
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: var(--spacing-md);
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* 直播间横屏优化 */
+    .live-room {
+        flex-direction: row;
+    }
+    
+    .video-section {
+        flex: 1;
+    }
+    
+    .interaction-section {
+        width: 300px;
+        height: 100vh;
+    }
+    
+    /* 视频全屏优化 */
+    .video-container {
+        height: 100vh;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    /* 移除hover效果，使用active状态 */
+    .btn:hover {
+        transform: none;
+        box-shadow: var(--shadow-light);
+    }
+    
+    .btn:active {
+        transform: translateY(1px);
+        box-shadow: var(--shadow-medium);
+    }
+    
+    .card:hover {
+        transform: none;
+        box-shadow: var(--shadow-light);
+    }
+    
+    .card:active {
+        transform: scale(0.98);
+        box-shadow: var(--shadow-medium);
+    }
+    
+    /* 增大可点击区域 */
+    .nav-link,
+    .tab,
+    .filter-btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* 图片清晰度优化 */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .header,
+    .footer,
+    .sidebar,
+    .course-sidebar,
+    .purchase-card,
+    .share-section {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 0;
+    }
+    
+    .wrapper {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .course-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-panel {
+        display: block !important;
+    }
+    
+    .course-tabs {
+        display: none;
+    }
+}

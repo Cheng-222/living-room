@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播间</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/live-room.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="shortcut icon" href="images/菜.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="nav-left">
+            <span class="live-title" data-translate-key="liveTitle">录播演示</span>
+            <span class="live-status" data-translate-key="liveStatus">·直播已结束</span>
+            <span class="iconfont">&#xe6a0</span>
+            <span class="viewer-count" data-translate-key="viewerCount"></span>
+
+            <span class="iconfont">&#xe61d</span>
+            <span class="like-count" data-translate-key="likeCount"></span>
+        </div>
+        <div class="nav-right">
+            <div class="language-select">
+                <div class="selected-language">
+                    <span class="iconfont">🌐</span>
+                    <span id="currentLanguage">简体中文</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <ul class="language-dropdown">
+                    <li data-lang="zh-CN">简体中文</li>
+                    <li data-lang="en">English</li>
+                </ul>
+            </div>
+            <div class="mobile-view">
+                <span data-translate-key="mobileView">手机观看</span>
+            </div>
+            <div class="user-avatar">
+                <img src="./images/菜.png" alt="用户头像">
+            </div>
+        </div>
+    </div>
+    <div class="live-room">
+        <!-- 左侧视频区域 -->
+        <div class="video-section">
+            <div class="video-container">
+                <div class="danmaku-manager">
+                    <button class="danmaku-toggle" data-translate-key="danmakuManager">弹幕
+                        <span class="iconfont">&#xe851</span>
+                    </button>
+                    <div class="danmaku-controls">
+                        <button class="danmaku-button active" data-mode="full"
+                            data-translate-key="fullDanmaku">全屏</button>
+                        <button class="danmaku-button" data-mode="half" data-translate-key="halfDanmaku">半屏</button>
+                        <button class="danmaku-button" data-mode="none" data-translate-key="noDanmaku">关闭</button>
+                    </div>
+                </div>
+                <div class="danmaku-container full"></div>
+                <video id="liveVideo" controls>
+                    <source src="./实验三 海边场景.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+        </div>
+
+        <!-- 右侧互动区域 -->
+        <div class="interaction-section">
+            <div class="tabs">
+                <button class="tab active" data-tab="chat" data-translate-key="chatTab">聊天</button>
+                <button class="tab" data-tab="files" data-translate-key="filesTab">课件</button>
+                <button class="tab" data-tab="qa" data-translate-key="qaTab">讨论</button>
+            </div>
+
+            <!-- 聊天面板 -->
+            <div class="panel chat-panel active">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-notice">
+                        <span
+                            data-translate-key="systemNotice">系统提示：直播内容及互动评论严禁传播违法或不良信息，如有违反，小鹅通将采取封禁措施。严禁未成年人直播或打赏。请谨慎判断，注意财产安全，以防人身或财产损失。</span>
+                    </div>
+                    <div class="enter-notice">
+                        <div class="zhushou">
+                            <img src="https://commonresource-1252524126.cdn.xiaoeknow.com/image/default.svg" alt="">
+                            <span class="user-name">直播助手:</span>
+                        </div>
+                        <p class="user-messages">欢迎进入直播间：<br>
+                            1、请自行调节手机音量至合适的状态。<br>
+                            2、直播界面显示讲师发布的内容，听众发言可以在讨论区进行或以弹幕形式查看。<br>
+                            3、直播结束后，你可以随时回看全部内容。</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="发送消息..."
+                        data-translate-key="chatInputPlaceholder">
+                    <button id="sendMessage" data-translate-key="sendMessageButton">发送</button>
+                </div>
+            </div>
+
+            <!-- 课件面板 -->
+            <div class="panel files-panel">
+                <div class="file-list">
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        <span class="file-name">课程讲义.pdf</span>
+                        <button class="download-btn" data-translate-key="fileDownloadButton">下载</button>
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        <span class="file-name">补充资料.docx</span>
+                        <button class="download-btn" data-translate-key="fileDownloadButton">下载</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 问答面板 -->
+            <div class="panel qa-panel">
+                <div class="qa-list">
+                    <div class="qa-item">
+                        <div class="question">
+                            <span class="user-name" data-translate-key="questionPrefix">用户1：</span>
+                            <p>请问这个知识点可以详细解释一下吗？</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="qa-input">
+                    <input type="text" placeholder="输入你的问题..." data-translate-key="qaInputPlaceholder">
+                    <button data-translate-key="askQuestionButton">提问</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="./js/live-room.js"></script>
+</body>
+
+</html>

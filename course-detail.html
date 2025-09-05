@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程详情 - 在线学习平台</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/course-detail.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1>在线学习平台</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="#" class="nav-link">课程</a>
+                <a href="#" class="nav-link">直播</a>
+                <a href="#" class="nav-link">社区</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search">
+                    <input type="text" placeholder="搜索课程..." class="search-input">
+                    <button class="search-btn">
+                        <i class="iconfont icon-search"></i>
+                    </button>
+                </div>
+                <div class="user-menu">
+                    <img src="images/菜.png" alt="现网蓝说2号【7978勿扰】" class="user-avatar">
+                    <div class="dropdown">
+                        <a href="user-center.html">个人中心</a>
+                        <a href="user-center.html">我的课程</a>
+                        <a href="user-center.html">设置</a>
+                        <a href="index.html">退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div class="wrapper">
+            <a href="index.html">首页</a>
+            <span class="separator">/</span>
+            <a href="#">前端开发</a>
+            <span class="separator">/</span>
+            <span class="current">JavaScript高级编程</span>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="wrapper">
+            <div class="course-layout">
+                <!-- 左侧课程信息 -->
+                <div class="course-main">
+                    <!-- 课程头部 -->
+                    <div class="course-header">
+                        <div class="course-video">
+                            <div class="video-container">
+                                <video class="course-preview" poster="images/course-preview.jpg" controls>
+                                    <source src="videos/course-intro.mp4" type="video/mp4">
+                                    您的浏览器不支持视频播放。
+                                </video>
+                                <div class="video-overlay">
+                                    <button class="play-btn">
+                                        <i class="iconfont icon-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-info">
+                            <div class="course-category">
+                                <span class="category-tag">前端开发</span>
+                                <span class="difficulty-tag difficulty-intermediate">中级</span>
+                            </div>
+                            <h1 class="course-title">JavaScript高级编程与实战应用</h1>
+                            <p class="course-subtitle">从基础到进阶，全面掌握JavaScript核心技术</p>
+                            
+                            <div class="course-meta">
+                                <div class="meta-item">
+                                    <i class="iconfont icon-user"></i>
+                                    <span>讲师：张老师</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="iconfont icon-time"></i>
+                                    <span>时长：24小时</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="iconfont icon-calendar"></i>
+                                    <span>更新：2024-01-20</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="iconfont icon-eye"></i>
+                                    <span>学习人数：1,234</span>
+                                </div>
+                            </div>
+                            
+                            <div class="course-rating">
+                                <div class="rating-stars">
+                                    <i class="iconfont icon-star-fill"></i>
+                                    <i class="iconfont icon-star-fill"></i>
+                                    <i class="iconfont icon-star-fill"></i>
+                                    <i class="iconfont icon-star-fill"></i>
+                                    <i class="iconfont icon-star"></i>
+                                </div>
+                                <span class="rating-score">4.8</span>
+                                <span class="rating-count">(256条评价)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 课程导航标签 -->
+                    <div class="course-tabs">
+                        <button class="tab-btn active" data-tab="overview">课程介绍</button>
+                        <button class="tab-btn" data-tab="chapters">课程目录</button>
+                        <button class="tab-btn" data-tab="reviews">学员评价</button>
+                        <button class="tab-btn" data-tab="instructor">讲师介绍</button>
+                    </div>
+
+                    <!-- 课程内容区域 -->
+                    <div class="course-content">
+                        <!-- 课程介绍 -->
+                        <div class="tab-panel active" id="overview">
+                            <div class="course-description">
+                                <h3>课程简介</h3>
+                                <p>本课程是一门全面深入的JavaScript高级编程课程，适合有一定JavaScript基础的学员进一步提升技能。课程涵盖了ES6+新特性、异步编程、模块化开发、性能优化等核心内容。</p>
+                                
+                                <h3>你将学到</h3>
+                                <ul class="learning-objectives">
+                                    <li><i class="iconfont icon-check"></i>掌握ES6+的所有新特性和语法</li>
+                                    <li><i class="iconfont icon-check"></i>深入理解JavaScript异步编程模式</li>
+                                    <li><i class="iconfont icon-check"></i>学会使用模块化开发和构建工具</li>
+                                    <li><i class="iconfont icon-check"></i>掌握JavaScript性能优化技巧</li>
+                                    <li><i class="iconfont icon-check"></i>了解前端框架的底层原理</li>
+                                    <li><i class="iconfont icon-check"></i>具备独立开发复杂项目的能力</li>
+                                </ul>
+                                
+                                <h3>适合人群</h3>
+                                <ul class="target-audience">
+                                    <li>有JavaScript基础的前端开发者</li>
+                                    <li>希望深入学习JavaScript的程序员</li>
+                                    <li>准备面试高级前端岗位的求职者</li>
+                                    <li>想要提升编程技能的在校学生</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 课程目录 -->
+                        <div class="tab-panel" id="chapters">
+                            <div class="chapter-list">
+                                <div class="chapter-item">
+                                    <div class="chapter-header">
+                                        <h4>第一章：ES6+新特性详解</h4>
+                                        <span class="chapter-duration">3小时</span>
+                                    </div>
+                                    <div class="lesson-list">
+                                        <div class="lesson-item">
+                                            <i class="iconfont icon-play-circle"></i>
+                                            <span class="lesson-title">1.1 let和const声明</span>
+                                            <span class="lesson-duration">15分钟</span>
+                                            <span class="lesson-status free">免费</span>
+                                        </div>
+                                        <div class="lesson-item">
+                                            <i class="iconfont icon-play-circle"></i>
+                                            <span class="lesson-title">1.2 箭头函数详解</span>
+                                            <span class="lesson-duration">20分钟</span>
+                                            <span class="lesson-status">会员</span>
+                                        </div>
+                                        <div class="lesson-item">
+                                            <i class="iconfont icon-play-circle"></i>
+                                            <span class="lesson-title">1.3 模板字符串</span>
+                                            <span class="lesson-duration">12分钟</span>
+                                            <span class="lesson-status">会员</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chapter-item">
+                                    <div class="chapter-header">
+                                        <h4>第二章：异步编程深入</h4>
+                                        <span class="chapter-duration">4小时</span>
+                                    </div>
+                                    <div class="lesson-list">
+                                        <div class="lesson-item">
+                                            <i class="iconfont icon-play-circle"></i>
+                                            <span class="lesson-title">2.1 Promise原理与应用</span>
+                                            <span class="lesson-duration">25分钟</span>
+                                            <span class="lesson-status">会员</span>
+                                        </div>
+                                        <div class="lesson-item">
+                                            <i class="iconfont icon-play-circle"></i>
+                                            <span class="lesson-title">2.2 async/await详解</span>
+                                            <span class="lesson-duration">30分钟</span>
+                                            <span class="lesson-status">会员</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chapter-item">
+                                    <div class="chapter-header">
+                                        <h4>第三章：模块化开发</h4>
+                                        <span class="chapter-duration">2.5小时</span>
+                                    </div>
+                                    <div class="lesson-list">
+                                        <div class="lesson-item">
+                                            <i class="iconfont icon-play-circle"></i>
+                                            <span class="lesson-title">3.1 ES6模块系统</span>
+                                            <span class="lesson-duration">18分钟</span>
+                                            <span class="lesson-status">会员</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 学员评价 -->
+                        <div class="tab-panel" id="reviews">
+                            <div class="reviews-summary">
+                                <div class="rating-overview">
+                                    <div class="rating-score-large">4.8</div>
+                                    <div class="rating-details">
+                                        <div class="rating-stars">
+                                            <i class="iconfont icon-star-fill"></i>
+                                            <i class="iconfont icon-star-fill"></i>
+                                            <i class="iconfont icon-star-fill"></i>
+                                            <i class="iconfont icon-star-fill"></i>
+                                            <i class="iconfont icon-star"></i>
+                                        </div>
+                                        <p>基于256条评价</p>
+                                    </div>
+                                </div>
+                                <div class="rating-breakdown">
+                                    <div class="rating-bar">
+                                        <span>5星</span>
+                                        <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>4星</span>
+                                        <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>3星</span>
+                                        <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                                        <span>3%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>2星</span>
+                                        <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                        <span>1%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>1星</span>
+                                        <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                        <span>1%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="reviews-list">
+                                <div class="review-item">
+                                    <div class="reviewer-info">
+                                        <img src="images/user1.jpg" alt="用户头像" class="reviewer-avatar">
+                                        <div class="reviewer-details">
+                                            <h5>小明同学</h5>
+                                            <div class="review-rating">
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                            </div>
+                                            <span class="review-date">2024-01-18</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-content">课程内容非常详细，老师讲解清晰，从基础到进阶都有涉及。特别是异步编程部分，让我对Promise和async/await有了更深的理解。强烈推荐！</p>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="reviewer-info">
+                                        <img src="images/user2.jpg" alt="用户头像" class="reviewer-avatar">
+                                        <div class="reviewer-details">
+                                            <h5>前端小白</h5>
+                                            <div class="review-rating">
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star-fill"></i>
+                                                <i class="iconfont icon-star"></i>
+                                            </div>
+                                            <span class="review-date">2024-01-15</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-content">作为一个JavaScript初学者，这门课程帮助我很大。虽然有些内容比较难，但老师讲得很耐心，配合实例很容易理解。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 讲师介绍 -->
+                        <div class="tab-panel" id="instructor">
+                            <div class="instructor-profile">
+                                <div class="instructor-avatar">
+                                    <img src="images/instructor.jpg" alt="讲师头像">
+                                </div>
+                                <div class="instructor-info">
+                                    <h3>张老师</h3>
+                                    <p class="instructor-title">高级前端工程师 / 技术专家</p>
+                                    <div class="instructor-stats">
+                                        <div class="stat-item">
+                                            <span class="stat-number">5</span>
+                                            <span class="stat-label">年经验</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">12</span>
+                                            <span class="stat-label">门课程</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">5000+</span>
+                                            <span class="stat-label">学员</span>
+                                        </div>
+                                    </div>
+                                    <p class="instructor-bio">张老师拥有5年以上的前端开发经验，曾在多家知名互联网公司担任高级前端工程师。精通JavaScript、React、Vue等技术栈，对前端性能优化和工程化有深入研究。教学风格深入浅出，善于用实际案例帮助学员理解复杂概念。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧购买区域 -->
+                <div class="course-sidebar">
+                    <div class="purchase-card">
+                        <div class="price-section">
+                            <div class="current-price">¥199</div>
+                            <div class="original-price">¥299</div>
+                            <div class="discount-tag">限时优惠</div>
+                        </div>
+                        
+                        <div class="purchase-actions">
+                            <button class="btn btn-primary btn-large purchase-btn">立即购买</button>
+                            <button class="btn btn-secondary btn-large trial-btn">免费试学</button>
+                        </div>
+                        
+                        <div class="course-features">
+                            <div class="feature-item">
+                                <i class="iconfont icon-video"></i>
+                                <span>24小时视频内容</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="iconfont icon-download"></i>
+                                <span>课件资料下载</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="iconfont icon-certificate"></i>
+                                <span>完成证书</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="iconfont icon-support"></i>
+                                <span>讲师答疑</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="iconfont icon-lifetime"></i>
+                                <span>永久观看</span>
+                            </div>
+                        </div>
+                        
+                        <div class="share-section">
+                            <p>分享给朋友</p>
+                            <div class="share-buttons">
+                                <button class="share-btn" data-platform="wechat">
+                                    <i class="iconfont icon-wechat"></i>
+                                </button>
+                                <button class="share-btn" data-platform="weibo">
+                                    <i class="iconfont icon-weibo"></i>
+                                </button>
+                                <button class="share-btn" data-platform="qq">
+                                    <i class="iconfont icon-qq"></i>
+                                </button>
+                                <button class="share-btn" data-platform="link">
+                                    <i class="iconfont icon-link"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 相关课程推荐 -->
+                    <div class="related-courses">
+                        <h3>相关课程推荐</h3>
+                        <div class="related-course-item">
+                            <img src="images/related1.jpg" alt="相关课程" class="related-thumb">
+                            <div class="related-info">
+                                <h4>React实战开发</h4>
+                                <p class="related-price">¥159</p>
+                            </div>
+                        </div>
+                        <div class="related-course-item">
+                            <img src="images/related2.jpg" alt="相关课程" class="related-thumb">
+                            <div class="related-info">
+                                <h4>Vue.js进阶</h4>
+                                <p class="related-price">¥179</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="wrapper">
+            <p>&copy; 2024 在线学习平台. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/course-detail.js"></script>
+</body>
+</html>

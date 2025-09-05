@@ -1,0 +1,817 @@
+/* 课程详情页面样式 */
+
+/* 面包屑导航 */
+.breadcrumb {
+    background: var(--bg-secondary);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb .separator {
+    margin: 0 var(--spacing-xs);
+    color: var(--text-tertiary);
+}
+
+.breadcrumb .current {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* 主要布局 */
+.main-content {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-primary);
+}
+
+.course-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+/* 课程主要内容 */
+.course-main {
+    background: var(--bg-primary);
+}
+
+/* 课程头部 */
+.course-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: var(--bg-primary);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+}
+
+/* 视频容器 */
+.course-video {
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-medium);
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+.course-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.video-container:hover .video-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.play-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.play-btn i {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-left: 4px;
+}
+
+/* 课程信息 */
+.course-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.course-category {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.category-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.difficulty-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.difficulty-beginner {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.difficulty-intermediate {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.difficulty-advanced {
+    background: var(--error-light);
+    color: var(--error-color);
+}
+
+.course-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    line-height: var(--line-height-tight);
+    margin: 0;
+}
+
+.course-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.meta-item i {
+    color: var(--text-tertiary);
+}
+
+.course-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.rating-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.rating-stars i {
+    color: var(--warning-color);
+    font-size: var(--font-size-sm);
+}
+
+.rating-score {
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.rating-count {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* 课程标签页 */
+.course-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: var(--spacing-xl);
+    background: var(--bg-primary);
+    border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+    overflow: hidden;
+}
+
+.tab-btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+    background: var(--bg-secondary);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background: var(--bg-primary);
+}
+
+/* 标签页内容 */
+.course-content {
+    background: var(--bg-primary);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+}
+
+.tab-panel {
+    display: none;
+    padding: var(--spacing-xl);
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* 课程描述 */
+.course-description h3 {
+    color: var(--text-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.course-description p {
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-lg);
+}
+
+.learning-objectives,
+.target-audience {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-lg) 0;
+}
+
+.learning-objectives li,
+.target-audience li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+}
+
+.learning-objectives i {
+    color: var(--success-color);
+    font-size: var(--font-size-sm);
+}
+
+/* 课程目录 */
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.chapter-item {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-medium);
+    overflow: hidden;
+}
+
+.chapter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.chapter-header h4 {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.chapter-duration {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.lesson-list {
+    background: var(--bg-primary);
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.lesson-item:last-child {
+    border-bottom: none;
+}
+
+.lesson-item:hover {
+    background: var(--bg-secondary);
+}
+
+.lesson-item i {
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+}
+
+.lesson-title {
+    flex: 1;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.lesson-duration {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.lesson-status {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.lesson-status.free {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.lesson-status:not(.free) {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+/* 评价区域 */
+.reviews-summary {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-medium);
+}
+
+.rating-overview {
+    text-align: center;
+}
+
+.rating-score-large {
+    font-size: 48px;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.rating-details p {
+    margin: var(--spacing-sm) 0 0 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.rating-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+}
+
+.rating-bar span:first-child {
+    width: 30px;
+    color: var(--text-secondary);
+}
+
+.rating-bar span:last-child {
+    width: 40px;
+    text-align: right;
+    color: var(--text-secondary);
+}
+
+.bar {
+    flex: 1;
+    height: 8px;
+    background: var(--border-light);
+    border-radius: var(--radius-small);
+    overflow: hidden;
+}
+
+.bar .fill {
+    height: 100%;
+    background: var(--warning-color);
+    transition: var(--transition-normal);
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.review-item {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-medium);
+    background: var(--bg-primary);
+}
+
+.reviewer-info {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-details h5 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.review-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.review-rating i {
+    color: var(--warning-color);
+    font-size: var(--font-size-sm);
+}
+
+.review-date {
+    color: var(--text-tertiary);
+    font-size: var(--font-size-sm);
+}
+
+.review-content {
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+/* 讲师介绍 */
+.instructor-profile {
+    display: flex;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-medium);
+}
+
+.instructor-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.instructor-info h3 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.instructor-title {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.instructor-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.instructor-bio {
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+/* 侧边栏 */
+.course-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    position: sticky;
+    top: var(--spacing-lg);
+}
+
+/* 购买卡片 */
+.purchase-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-medium);
+    padding: var(--spacing-xl);
+    border: 1px solid var(--border-light);
+}
+
+.price-section {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.current-price {
+    font-size: 36px;
+    font-weight: var(--font-weight-bold);
+    color: var(--error-color);
+    line-height: 1;
+}
+
+.original-price {
+    font-size: var(--font-size-lg);
+    color: var(--text-tertiary);
+    text-decoration: line-through;
+    margin-top: var(--spacing-xs);
+}
+
+.discount-tag {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: var(--error-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-small);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+}
+
+.purchase-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-large {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.course-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.feature-item i {
+    color: var(--success-color);
+    font-size: var(--font-size-base);
+}
+
+.share-section {
+    text-align: center;
+}
+
+.share-section p {
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-light);
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.share-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.share-btn i {
+    font-size: var(--font-size-lg);
+}
+
+/* 相关课程 */
+.related-courses {
+    background: var(--bg-primary);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-light);
+}
+
+.related-courses h3 {
+    margin: 0 0 var(--spacing-md) 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.related-course-item {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.related-course-item:last-child {
+    border-bottom: none;
+}
+
+.related-course-item:hover {
+    background: var(--bg-secondary);
+    margin: 0 calc(-1 * var(--spacing-sm));
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    border-radius: var(--radius-small);
+}
+
+.related-thumb {
+    width: 60px;
+    height: 40px;
+    border-radius: var(--radius-small);
+    object-fit: cover;
+}
+
+.related-info h4 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+}
+
+.related-price {
+    margin: 0;
+    color: var(--error-color);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .course-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .course-header {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .course-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+    }
+    
+    .reviews-summary {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .instructor-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .instructor-stats {
+        justify-content: center;
+    }
+    
+    .course-sidebar {
+        order: -1;
+    }
+    
+    .purchase-card {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-meta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .purchase-actions {
+        gap: var(--spacing-xs);
+    }
+    
+    .btn-large {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+}

@@ -99,8 +99,16 @@ const NavigationModule = {
     
     bindEvents() {
         Utils.Event.delegate(this.navMenu, 'a', 'click', (event) => {
-            event.preventDefault();
-            this.switchNavItem(event.target);
+            const href = event.target.getAttribute('href');
+            
+            // 如果是外部链接或锚点链接，阻止默认行为
+            if (href === '#' || href.startsWith('http')) {
+                event.preventDefault();
+                this.switchNavItem(event.target);
+            } else {
+                // 对于内部页面链接，允许正常跳转
+                this.switchNavItem(event.target);
+            }
         });
     },
     

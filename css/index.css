@@ -695,7 +695,7 @@
 .sidebar ul li p {
     font-size: var(--font-size-xs);
     color: var(--text-secondary);
-    margin-top: 10px;
+    margin-top: -3px;
     transition: var(--transition-normal);
 }
 

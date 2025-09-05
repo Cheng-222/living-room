@@ -315,7 +315,7 @@ body {
   transition: var(--transition-normal);
   border: 3px solid transparent;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) padding-box,
-              linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -405,15 +405,15 @@ body {
     width: 100%;
     padding: 0 var(--spacing-lg);
   }
-  
+
   .header {
     padding: 0 var(--spacing-lg);
   }
-  
+
   .nav-menu {
     gap: var(--spacing-md);
   }
-  
+
   .nav-link {
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--font-size-sm);
@@ -426,13 +426,13 @@ body {
     padding: 0 var(--spacing-md);
     flex-wrap: wrap;
   }
-  
+
   .wrapper {
     flex-direction: column;
     gap: var(--spacing-md);
     padding: 0 var(--spacing-md);
   }
-  
+
   .nav-menu {
     order: 3;
     width: 100%;
@@ -440,30 +440,30 @@ body {
     margin-top: var(--spacing-sm);
     padding: var(--spacing-xs) var(--spacing-sm);
   }
-  
+
   .header-actions {
     order: 2;
     gap: var(--spacing-md);
   }
-  
+
   .search {
     padding: var(--spacing-xs);
   }
-  
+
   .search-input {
     width: 150px;
     padding: var(--spacing-xs) var(--spacing-sm);
   }
-  
+
   .search-input:focus {
     width: 180px;
   }
-  
+
   .user-avatar {
     width: 36px;
     height: 36px;
   }
-  
+
   .logo h1 {
     font-size: 20px;
   }
@@ -474,39 +474,39 @@ body {
     height: auto;
     padding: var(--spacing-sm);
   }
-  
+
   .wrapper {
     gap: var(--spacing-sm);
   }
-  
+
   .nav-menu {
     flex-wrap: wrap;
     gap: var(--spacing-xs);
     padding: var(--spacing-xs);
   }
-  
+
   .nav-link {
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: var(--font-size-xs);
   }
-  
+
   .search-input {
     width: 120px;
   }
-  
+
   .search-input:focus {
     width: 140px;
   }
-  
+
   .user-avatar {
     width: 32px;
     height: 32px;
   }
-  
+
   .logo h1 {
     font-size: 18px;
   }
-  
+
   .dropdown {
     right: -20px;
     min-width: 120px;

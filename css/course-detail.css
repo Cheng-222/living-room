@@ -367,6 +367,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -944,7 +945,7 @@
         grid-template-columns: 1fr 300px;
         gap: var(--spacing-lg);
     }
-    
+
     .course-header {
         padding: var(--spacing-lg);
     }
@@ -955,69 +956,69 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
-    
+
     .course-header {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
         padding: var(--spacing-md);
     }
-    
+
     .course-title {
         font-size: var(--font-size-2xl);
     }
-    
+
     .course-tabs {
         overflow-x: auto;
         white-space: nowrap;
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
-    
+
     .course-tabs::-webkit-scrollbar {
         display: none;
     }
-    
+
     .tab-btn {
         white-space: nowrap;
         min-width: 120px;
     }
-    
+
     .tab-panel {
         padding: var(--spacing-lg);
     }
-    
+
     .reviews-summary {
         grid-template-columns: 1fr;
         text-align: center;
         gap: var(--spacing-lg);
     }
-    
+
     .instructor-profile {
         flex-direction: column;
         text-align: center;
         gap: var(--spacing-lg);
     }
-    
+
     .instructor-stats {
         justify-content: center;
     }
-    
+
     .course-sidebar {
         order: -1;
     }
-    
+
     .purchase-card {
         position: sticky;
         top: var(--spacing-sm);
         z-index: 10;
         margin-bottom: var(--spacing-lg);
     }
-    
+
     .play-btn {
         width: 60px;
         height: 60px;
     }
-    
+
     .play-btn i {
         font-size: 28px;
     }
@@ -1027,86 +1028,86 @@
     .main-content {
         padding: var(--spacing-lg) 0;
     }
-    
+
     .course-header {
         padding: var(--spacing-sm);
         gap: var(--spacing-md);
     }
-    
+
     .course-title {
         font-size: var(--font-size-xl);
     }
-    
+
     .course-subtitle {
         font-size: var(--font-size-base);
     }
-    
+
     .course-meta {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
-    
+
     .meta-item {
         justify-content: center;
     }
-    
+
     .tab-panel {
         padding: var(--spacing-md);
     }
-    
+
     .chapter-header {
         padding: var(--spacing-sm) var(--spacing-md);
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spacing-xs);
     }
-    
+
     .lesson-item {
         padding: var(--spacing-sm) var(--spacing-md);
         flex-wrap: wrap;
     }
-    
+
     .lesson-title {
         flex-basis: 100%;
         margin-bottom: var(--spacing-xs);
     }
-    
+
     .purchase-card {
         padding: var(--spacing-md);
         margin: 0 var(--spacing-sm) var(--spacing-lg) var(--spacing-sm);
         border-radius: var(--radius-medium);
     }
-    
+
     .purchase-actions {
         gap: var(--spacing-xs);
     }
-    
+
     .btn-large {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-base);
     }
-    
+
     .course-features {
         gap: var(--spacing-xs);
     }
-    
+
     .feature-item {
         font-size: var(--font-size-xs);
     }
-    
+
     .play-btn {
         width: 50px;
         height: 50px;
     }
-    
+
     .play-btn i {
         font-size: 24px;
     }
-    
+
     .related-courses {
         padding: var(--spacing-md);
     }
-    
+
     .instructor-avatar img {
         width: 80px;
         height: 80px;

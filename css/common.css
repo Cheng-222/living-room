@@ -223,7 +223,7 @@ body {
 }
 
 .search-input-wrapper.active {
-  width: 240px;
+  width: 200px;
   opacity: 1;
 }
 

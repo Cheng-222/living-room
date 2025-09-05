@@ -673,3 +673,43 @@
         justify-content: flex-end;
     }
 }
+
+/* 通知样式 */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-medium);
+    color: white;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-medium);
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification-success {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.notification-error {
+    background: linear-gradient(135deg, #f44336, #da190b);
+}
+
+.notification-info {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.notification-warning {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}

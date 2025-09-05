@@ -354,7 +354,7 @@ const CourseDetailManager = {
         item.className = 'related-course-item';
         
         item.innerHTML = `
-            <img src="${course.image}" alt="${course.title}" class="related-thumb" onerror="this.src='images/default-course.jpg'">
+            <img src="images/1.png" alt="${course.title}" class="related-thumb" onerror="this.src='images/default-course.jpg'">
             <div class="related-info">
                 <h4>${course.title}</h4>
                 <p class="related-price">${course.price}</p>

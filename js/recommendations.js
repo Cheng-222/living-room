@@ -126,15 +126,15 @@ const RecommendationManager = {
   
   // 格式化价格显示
   formatPrice(price) {
-    return Utils.Number.formatCurrency(price, 2);
+    return price.toFixed(2);
   },
   
   // 格式化购买人数
   formatPurchaseCount(count) {
     if (count >= 10000) {
-      return Utils.Number.formatNumber(count / 10000, 1) + '万人购买';
+      return (count / 10000).toFixed(1) + '万人购买';
     }
-    return Utils.Number.formatNumber(count) + '人购买';
+    return count.toLocaleString() + '人购买';
   },
   
   // 绑定事件
